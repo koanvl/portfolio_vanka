@@ -9,8 +9,7 @@
 body	
 	font-size: 16px
 	line-height: 20px		
-	height: 100%
-	padding-bottom: 169px
+	font-family: 'Quicksand', Arial, Helvetica, sans-serif
 	
 
 h1, h2, h3, h4
@@ -31,3 +30,44 @@ ul
 	margin: 0
 	padding: 0
 
+@media (min-width: 1400px)
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl
+	max-width: 1140px
+
+.text-orange
+	color: $orangeColor
+
+	.text-white
+		color: $whiteColor
+
+.section
+	padding: 90px 0
+.section-light
+	.section-title h2,
+	.section-title h3
+		color: $darkGreyColor
+.section-dark
+	.section-title h2,
+	.section-title h3
+		color: $whiteColor
+
+.section-light
+	background-color: $whiteColor
+.section-dark
+	background-color: $darkGreyColor
+
+.section-title 
+	h2
+		font-size: 38px
+		font-weight: bold
+		margin-bottom: 20px
+	h3
+		font-size: 22px
+		margin-bottom: 20px
+	h5
+		font-size: 18px
+		margin-bottom: 10px
+		color: $orangeColor
+		
+
+		
