@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAQ,sCAA2B;AAC3B,kCAAuB;AACvB,2CAAgC;AAChC,oCAAyB",
-"sources": ["../sass/libs.sass"],
-"names": [],
-"file": "libs.css"
-}
