@@ -9,6 +9,8 @@
     font-size: 18px
     margin-bottom: 10px
     text-transform: uppercase
+    @media screen and (max-width: 992px)
+      font-size: 16px
   .progress-bar
     height: 15px
     width: 100%
@@ -26,7 +28,9 @@
       transition: all 1.5s ease
 .skills-box
   margin-bottom: 20px
-.skill-tag-box .tag-item   
+.skill-tag-box 
+  justify-content: start
+  .tag-item   
     background-color: $orangeColor
    
 .tag-item

@@ -81,6 +81,11 @@ ul {
   font-weight: bold;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 768px) {
+  .section-title h2 {
+    font-size: 32px;
+  }
+}
 .section-title h3 {
   font-size: 22px;
   margin-bottom: 20px;
@@ -109,10 +114,39 @@ ul {
   color: #fff;
   transition: 0.5s;
 }
-.btn-orange:hover {
+.btn-orange a {
+  color: #fff;
+}
+.btn-orange:hover, .btn-orange:focus {
   background-color: #fff;
-  color: #f39c12;
   border-color: #f39c12;
+  box-shadow: none !important;
+}
+.btn-orange:hover a, .btn-orange:focus a {
+  color: #f39c12;
+}
+
+.social-links ul li {
+  display: inline-block;
+  list-style-type: none;
+  margin: 20px 10px 0 10px;
+}
+.social-links ul li a {
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background-color: #f39c12;
+  border-radius: 50%;
+  display: inline-block;
+  transition: 0.5s ease;
+}
+.social-links ul li a:hover {
+  color: #f39c12;
+  background-color: #fff;
+}
+.social-links ul li a i {
+  line-height: 40px;
 }
 
 header {
@@ -161,6 +195,9 @@ header .nav-link-own:hover {
   border: none;
   border-color: rgba(0, 0, 0, 0);
 }
+.navbar-dark .navbar-toggler:focus {
+  box-shadow: none;
+}
 
 .section-intro {
   width: 100%;
@@ -201,6 +238,9 @@ header .nav-link-own:hover {
   }
 }
 
+.intro-content a {
+  color: #AFB2BF;
+}
 .intro-content h1 {
   font-size: 40px;
   margin-bottom: 20px;
@@ -237,6 +277,11 @@ header .nav-link-own:hover {
   margin-bottom: 10px;
   text-transform: uppercase;
 }
+@media screen and (max-width: 992px) {
+  .about-content .skill-title {
+    font-size: 16px;
+  }
+}
 .about-content .progress-bar {
   height: 15px;
   width: 100%;
@@ -259,6 +304,9 @@ header .nav-link-own:hover {
   margin-bottom: 20px;
 }
 
+.skill-tag-box {
+  justify-content: start;
+}
 .skill-tag-box .tag-item {
   background-color: #f39c12;
 }
@@ -538,6 +586,11 @@ header .nav-link-own:hover {
     margin-right: auto;
   }
 }
+@media screen and (max-width: 576px) {
+  .contact-box {
+    width: 100%;
+  }
+}
 .contact-box .contact-title {
   color: #fff;
   margin-bottom: 20px;
@@ -566,28 +619,6 @@ header .nav-link-own:hover {
   padding: 40px 0;
   text-align: center;
   color: #fff;
-}
-.footer .social-links ul li {
-  display: inline-block;
-  list-style-type: none;
-  margin: 20px 10px 0 10px;
-}
-.footer .social-links ul li a {
-  color: #fff;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  background-color: #f39c12;
-  border-radius: 50%;
-  display: inline-block;
-  transition: 0.5s ease;
-}
-.footer .social-links ul li a:hover {
-  color: #f39c12;
-  background-color: #fff;
-}
-.footer .social-links ul li a i {
-  line-height: 40px;
 }
 .footer .divider {
   width: 100%;
