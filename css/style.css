@@ -232,11 +232,6 @@ header .nav-link-own:hover {
     margin-bottom: 40px;
   }
 }
-@media screen and (max-width: 576px) {
-  .intro-photo {
-    display: none;
-  }
-}
 
 .intro-content a {
   color: #AFB2BF;
