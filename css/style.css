@@ -32,10 +32,6 @@ a:focus {
   text-decoration: none;
 }
 
-p, ul > li {
-  font-family: "Helvetica", Arial, sans-serif;
-}
-
 ul {
   margin: 0;
   padding: 0;
@@ -90,7 +86,7 @@ ul {
   margin-bottom: 20px;
 }
 .section-title h5 {
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 10px;
   color: #f39c12;
 }
@@ -231,6 +227,7 @@ header .nav-link-own:hover {
 .about-content {
   padding-left: 20px;
   color: #212529;
+  margin-top: 40px;
 }
 .about-content p {
   line-height: 28px;
@@ -257,7 +254,12 @@ header .nav-link-own:hover {
   width: 0;
   transition: all 1.5s ease;
 }
-.about-content .tag-item {
+
+.skills-box {
+  margin-bottom: 20px;
+}
+
+.skill-tag-box .tag-item {
   background-color: #f39c12;
 }
 
@@ -270,10 +272,24 @@ header .nav-link-own:hover {
   font-size: 14px;
 }
 
-@media screen and (max-width: 1200px) {
-  .section-about .section-title.text-left {
-    text-align: center;
-  }
+.section-about h6 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.soft-skill-box {
+  margin: 10px 0 20px 0;
+}
+.soft-skill-box .title {
+  font-size: 18px;
+  color: #f39c12;
+  font-weight: bold;
+  margin-bottom: 10px;
+  line-height: 20px;
+}
+
+.lang-box li {
+  list-style-type: none;
 }
 
 .section-education .nav-link-own {
