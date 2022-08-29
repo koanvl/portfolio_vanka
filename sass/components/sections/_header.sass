@@ -14,6 +14,8 @@ header, .navbar-own
     text-transform: uppercase
     color: $orangeColor
     font-weight: bold
+    @media screen and (max-width: 992px)
+      float: left
 header
   .nav-link-own 
     color: $whiteColor!important 
@@ -34,3 +36,44 @@ header
   border-color: rgba(0,0,0,0)
   &:focus
     box-shadow: none
+  @media screen and (max-width: 992px)
+    float: right
+
+.navbar-own>.container
+  @media screen and (max-width: 992px)
+    display: block
+    position: relative
+
+.language-switcher  
+  @media screen and (max-width: 992px)
+    position: absolute
+    top: 0
+    right: 80px
+  .dropdown-menu-own[data-bs-popper]
+      left: auto
+      right: 0
+      text-align: right
+  .dropdown-menu-own
+    min-width: 5rem
+  .btn-language-switch
+    background-color: transparent
+    border: none
+    &:focus
+      box-shadow: none
+    i 
+      padding-right: 5px
+
+  .dropdown-item-own
+    position: relative
+    &:before
+      content: ""
+      width: 20px
+      height: 20px
+      position: absolute
+      top: 2px
+      left: 8px  
+      background-size: cover
+  .dropdown-item-own.english:before
+    background-image: url("../img/eng-flag.png")
+  .dropdown-item-own.spanish:before
+    background-image: url("../img/es-flag.png")

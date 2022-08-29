@@ -149,6 +149,84 @@ ul {
   line-height: 40px;
 }
 
+.btn-hire {
+  padding: 20px 40px;
+  font-size: 36px;
+}
+
+.heartbeat {
+  -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+  animation: heartbeat 1.5s ease-in-out infinite both;
+}
+
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
 header {
   padding: 25px 0;
   color: #fff;
@@ -171,6 +249,11 @@ header .navbar-brand-own, .navbar-own .navbar-brand-own {
   text-transform: uppercase;
   color: #f39c12;
   font-weight: bold;
+}
+@media screen and (max-width: 992px) {
+  header .navbar-brand-own, .navbar-own .navbar-brand-own {
+    float: left;
+  }
 }
 
 header .nav-link-own {
@@ -197,6 +280,62 @@ header .nav-link-own:hover {
 }
 .navbar-dark .navbar-toggler:focus {
   box-shadow: none;
+}
+@media screen and (max-width: 992px) {
+  .navbar-dark .navbar-toggler {
+    float: right;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .navbar-own > .container {
+    display: block;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .language-switcher {
+    position: absolute;
+    top: 0;
+    right: 80px;
+  }
+}
+.language-switcher .dropdown-menu-own[data-bs-popper] {
+  left: auto;
+  right: 0;
+  text-align: right;
+}
+.language-switcher .dropdown-menu-own {
+  min-width: 5rem;
+}
+.language-switcher .btn-language-switch {
+  background-color: transparent;
+  border: none;
+}
+.language-switcher .btn-language-switch:focus {
+  box-shadow: none;
+}
+.language-switcher .btn-language-switch i {
+  padding-right: 5px;
+}
+.language-switcher .dropdown-item-own {
+  position: relative;
+}
+.language-switcher .dropdown-item-own:before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 2px;
+  left: 8px;
+  background-size: cover;
+}
+.language-switcher .dropdown-item-own.english:before {
+  background-image: url("../img/eng-flag.png");
+}
+.language-switcher .dropdown-item-own.spanish:before {
+  background-image: url("../img/es-flag.png");
 }
 
 .section-intro {
@@ -335,6 +474,16 @@ header .nav-link-own:hover {
   list-style-type: none;
 }
 
+.certificate-link {
+  color: #f39c12;
+  transition: 0.5s;
+  padding-left: 10px;
+  font-weight: bold;
+}
+.certificate-link:hover {
+  color: #2D3436;
+}
+
 .section-education .nav-link-own {
   color: #f39c12;
   border: 0;
@@ -372,11 +521,30 @@ header .nav-link-own:hover {
 .tab-content-own .divider {
   position: absolute;
   width: 2px;
-  height: 50%;
+  height: 100%;
   background-color: #2D3436;
   top: 26px;
-  left: 33.3333%;
-  transform: translateX(-11px);
+  left: 14%;
+}
+.tab-content-own .divider:after {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #2D3436;
+  position: absolute;
+  bottom: 0;
+  left: -6px;
+}
+@media screen and (max-width: 768px) {
+  .tab-content-own .divider:after {
+    display: none;
+  }
+}
+@media screen and (max-width: 992px) {
+  .tab-content-own .divider {
+    left: 5.3%;
+  }
 }
 @media screen and (max-width: 768px) {
   .tab-content-own .divider {
@@ -385,7 +553,7 @@ header .nav-link-own:hover {
 }
 
 .resume-info {
-  text-align: right;
+  text-align: left;
   padding-right: 10px;
 }
 .resume-info h4 {
@@ -401,6 +569,7 @@ header .nav-link-own:hover {
 .resume-info h5 {
   color: #AFB2BF;
   font-size: 22px;
+  margin-bottom: 20px;
 }
 
 .resume-content {
@@ -415,6 +584,15 @@ header .nav-link-own:hover {
   line-height: 24px;
   font-weight: bold;
   margin-bottom: 20px;
+}
+.resume-content h5 {
+  color: #fff;
+  font-size: 20px;
+  line-height: 22px;
+}
+.resume-content h5 i {
+  color: #f39c12;
+  padding-right: 5px;
 }
 .resume-content .icon i {
   color: #f39c12;
@@ -433,9 +611,8 @@ header .nav-link-own:hover {
   border-radius: 50%;
   background-color: #2D3436;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: -23px;
+  top: 25px;
+  left: -29px;
 }
 @media screen and (max-width: 768px) {
   .resume-info h4:after {
@@ -456,6 +633,27 @@ header .nav-link-own:hover {
 .resume-content {
     max-width: 100%;
   }
+}
+
+.responsibilities-box {
+  color: #AFB2BF;
+  position: relative;
+  overflow: hidden;
+  transition: ease 0.5s;
+  height: auto;
+}
+.responsibilities-box ul li {
+  list-style-type: none;
+  padding-left: 15px;
+  position: relative;
+  margin: 5px 0;
+}
+.responsibilities-box ul li::before {
+  content: "-";
+  color: #f39c12;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .service-box {
@@ -486,6 +684,9 @@ header .nav-link-own:hover {
 .service-description {
   color: #AFB2BF;
   line-height: 28px;
+}
+.service-description p {
+  min-height: 170px;
 }
 
 .portfolio-item-box {

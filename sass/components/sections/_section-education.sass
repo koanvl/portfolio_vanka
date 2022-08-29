@@ -31,15 +31,27 @@
   .divider
     position: absolute
     width: 2px
-    height: 50%
+    height: 100%
     background-color: $darkGreyColor
     top: 26px
-    left: 33.3333%
-    transform: translateX(-11px)
+    left: 14%
+    &:after
+      content: ""
+      width: 14px
+      height: 14px
+      border-radius: 50%
+      background-color: $darkGreyColor
+      position: absolute
+      bottom:0
+      left: -6px
+      @media screen and (max-width: 768px)
+        display: none
+    @media screen and (max-width: 992px)
+      left: 5.3%
     @media screen and (max-width: 768px)
       display: none
 .resume-info
-  text-align: right
+  text-align: left
   padding-right: 10px
   h4
     text-transform: uppercase
@@ -53,6 +65,7 @@
   h5 
     color: $lightGreyColor
     font-size: 22px
+    margin-bottom: 20px
 .resume-content
   padding: 40px
   background-color: $darkGreyColor
@@ -64,6 +77,14 @@
     line-height: 24px
     font-weight: bold
     margin-bottom: 20px
+  h5 
+    color: $whiteColor
+    font-size: 20px
+    line-height: 22px
+    i 
+      color: $orangeColor
+      padding-right: 5px
+
     
   .icon i 
     color: $orangeColor
@@ -83,9 +104,8 @@
     border-radius: 50%
     background-color: $darkGreyColor
     position: absolute
-    top: 50%
-    transform: translateY(-50%)
-    right: -23px
+    top: 25px
+    left: -29px
     @media screen and (max-width: 768px)
       display: none
 
@@ -98,5 +118,22 @@
   @media screen and(max-width: 576px)
     max-width: 100%
    
-
+.responsibilities-box
+  color: $lightGreyColor
+  position: relative  
+  overflow: hidden
+  transition: ease 0.5s
+  height: auto
+  ul
+    li
+      list-style-type: none
+      padding-left: 15px
+      position: relative
+      margin: 5px 0
+      &::before 
+        content: "-"
+        color: $orangeColor
+        position: absolute
+        top: 0
+        left: 0
 
