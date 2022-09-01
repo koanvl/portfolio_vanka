@@ -372,7 +372,7 @@ header .nav-link-own:hover {
   }
 }
 
-.intro-content a {
+.intro-content .email-link {
   color: #AFB2BF;
 }
 .intro-content h1 {
@@ -396,6 +396,12 @@ header .nav-link-own:hover {
 
 .navbar-expand-lg .navbar-collapse {
   justify-content: flex-end;
+}
+
+.btn-cv {
+  color: #fff;
+  font-weight: bold;
+  margin-top: 40px;
 }
 
 .about-content {
